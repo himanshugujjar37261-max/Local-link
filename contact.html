@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — LocalLink</title>
+    <meta name="description"
+        content="Get in touch with LocalLink. We'd love to hear from you. Contact us for business inquiries or support.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔗</text></svg>">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar no-hero" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <div class="nav-logo-icon">L</div>LocalLink
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#businesses">Businesses</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="register.html" class="btn btn-primary nav-cta">Register Business</a>
+            </div>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><span>Contact Us</span></div>
+            <h1>Contact Us</h1>
+            <p>Have questions? We'd love to hear from you. Send us a message!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="form-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Info Cards -->
+                <div class="contact-info-cards">
+                    <div class="contact-info-card reveal">
+                        <div class="contact-info-icon">📍</div>
+                        <div>
+                            <h4>Our Office</h4>
+                            <p>Main Market, Near Bus Stand,<br>Shamli, Uttar Pradesh 247776</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card reveal" style="transition-delay:0.1s">
+                        <div class="contact-info-icon">📞</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+91 98765 00000<br>Mon–Sat, 9:00 AM – 6:00 PM</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card reveal" style="transition-delay:0.2s">
+                        <div class="contact-info-icon">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@locallink.in<br>support@locallink.in</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-card reveal" style="transition-delay:0.3s">
+                        <div class="contact-info-icon">💬</div>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>+91 98765 00000<br>Quick support via chat</p>
+                        </div>
+                    </div>
+
+                    <!-- Map -->
+                    <div class="detail-map reveal" style="transition-delay:0.4s">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27846.24186608784!2d77.2990!3d29.4497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c3f1c1c1c1c1c%3A0x1c1c1c1c1c1c1c1c!2sShamli%2C+Uttar+Pradesh!5e0!3m2!1sen!2sin!4v1640000000000"
+                            allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="form-container reveal-right" style="padding:36px;margin:0">
+                    <h3 style="margin-bottom:8px">Send us a Message</h3>
+                    <p style="color:var(--grey-500);font-size:0.9rem;margin-bottom:28px">Fill out the form below and
+                        we'll get back to you within 24 hours.</p>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label>Full Name <span class="required">*</span></label>
+                            <input type="text" class="form-control" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address <span class="required">*</span></label>
+                            <input type="email" class="form-control" placeholder="email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" class="form-control" placeholder="+91 XXXXX XXXXX">
+                        </div>
+                        <div class="form-group">
+                            <label>Subject <span class="required">*</span></label>
+                            <select class="form-control" required>
+                                <option value="">Select Subject</option>
+                                <option>General Inquiry</option>
+                                <option>Business Listing</option>
+                                <option>Technical Support</option>
+                                <option>Advertising</option>
+                                <option>Partnership</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Message <span class="required">*</span></label>
+                            <textarea class="form-control" placeholder="Write your message here..." required></textarea>
+                        </div>
+                        <div class="form-submit" style="text-align:left">
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">
+                        <div class="nav-logo-icon">L</div>LocalLink
+                    </a>
+                    <p>Shamli's trusted digital directory and marketplace platform connecting local businesses to
+                        customers and enterprises.</p>
+                    <div class="footer-social"><a href="#">📘</a><a href="#">🐦</a><a href="#">📸</a><a href="#">💼</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4><a href="index.html">Home</a><a href="index.html#about">About Us</a><a
+                        href="index.html#businesses">Businesses</a><a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>For Business</h4><a href="register.html">Register Business</a><a href="#">Advertise</a><a
+                        href="#">Business Tools</a><a href="#">Pricing</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a><a href="#">Cookie
+                        Policy</a><a href="#">Disclaimer</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LocalLink. All rights reserved. Made with ❤️ in Shamli, Uttar Pradesh.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

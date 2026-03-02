@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Details — LocalLink</title>
+    <meta name="description" content="View detailed information about local businesses in Shamli on LocalLink.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔗</text></svg>">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar no-hero" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <div class="nav-logo-icon">L</div>LocalLink
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#businesses">Businesses</a>
+                <a href="contact.html">Contact</a>
+                <a href="register.html" class="btn btn-primary nav-cta">Register Business</a>
+            </div>
+            <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <div class="breadcrumb"><a href="index.html">Home</a><span>›</span><a
+                    href="index.html#businesses">Businesses</a><span>›</span><span
+                    id="detailBreadcrumbName">Business</span></div>
+            <h1 id="detailName">Business Details</h1>
+        </div>
+    </section>
+
+    <!-- Detail Content -->
+    <div id="detailPage">
+        <section class="detail-section">
+            <div class="container">
+                <div class="detail-grid">
+                    <!-- Main Content -->
+                    <div>
+                        <!-- Gallery -->
+                        <div class="detail-gallery">
+                            <div class="main-image" id="mainImage"></div>
+                            <div class="gallery-thumbs" id="galleryThumbs"></div>
+                        </div>
+
+                        <!-- Overview -->
+                        <div class="detail-overview" style="margin-top:32px">
+                            <div class="category-badge" id="detailCategory"></div>
+                            <div id="detailTags" style="margin-bottom:12px"></div>
+                            <h2 id="detailTitle"></h2>
+                            <p id="detailDesc"></p>
+                        </div>
+
+                        <!-- Services -->
+                        <div class="detail-services" style="margin-top:32px">
+                            <h3>Products & Services</h3>
+                            <ul id="detailServices"></ul>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="detail-sidebar">
+                        <!-- Contact Info -->
+                        <div class="sidebar-card">
+                            <h3>Contact Information</h3>
+                            <div class="contact-list">
+                                <div class="contact-item"><span class="icon">📍</span><span id="detailAddress"></span>
+                                </div>
+                                <div class="contact-item"><span class="icon">📞</span><span id="detailPhone"></span>
+                                </div>
+                                <div class="contact-item"><span class="icon">✉️</span><span id="detailEmail"></span>
+                                </div>
+                                <div class="contact-item"><span class="icon">🌐</span><a id="detailWebsite" href="#"
+                                        target="_blank"></a></div>
+                            </div>
+                            <a id="whatsappBtn" href="#" target="_blank" class="btn btn-whatsapp">💬 Chat on
+                                WhatsApp</a>
+                        </div>
+
+                        <!-- Inquiry Form -->
+                        <div class="sidebar-card">
+                            <h3>Send Inquiry</h3>
+                            <form class="detail-contact-form" id="detailContactForm">
+                                <div class="form-group"><input type="text" class="form-control" placeholder="Your Name"
+                                        required></div>
+                                <div class="form-group"><input type="email" class="form-control"
+                                        placeholder="Your Email" required></div>
+                                <div class="form-group"><input type="tel" class="form-control" placeholder="Your Phone">
+                                </div>
+                                <div class="form-group"><textarea class="form-control" placeholder="Your Message"
+                                        rows="3" required></textarea></div>
+                                <button type="submit" class="btn btn-primary btn-sm" style="width:100%">Send
+                                    Inquiry</button>
+                            </form>
+                        </div>
+
+                        <!-- Map -->
+                        <div class="detail-map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27846.24186608784!2d77.2990!3d29.4497!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c3f1c1c1c1c1c%3A0x1c1c1c1c1c1c1c1c!2sShamli%2C+Uttar+Pradesh!5e0!3m2!1sen!2sin!4v1640000000000"
+                                allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews -->
+        <section class="reviews-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Customer Reviews</h2>
+                </div>
+                <div id="reviewsList" style="max-width:800px;margin:0 auto"></div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">
+                        <div class="nav-logo-icon">L</div>LocalLink
+                    </a>
+                    <p>Shamli's trusted digital directory and marketplace platform connecting local businesses to
+                        customers and enterprises.</p>
+                    <div class="footer-social"><a href="#">📘</a><a href="#">🐦</a><a href="#">📸</a><a href="#">💼</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4><a href="index.html">Home</a><a href="index.html#about">About Us</a><a
+                        href="index.html#businesses">Businesses</a><a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>For Business</h4><a href="register.html">Register Business</a><a href="#">Advertise</a><a
+                        href="#">Business Tools</a><a href="#">Pricing</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms & Conditions</a><a href="#">Cookie
+                        Policy</a><a href="#">Disclaimer</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LocalLink. All rights reserved. Made with ❤️ in Shamli, Uttar Pradesh.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
