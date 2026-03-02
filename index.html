@@ -1,202 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LocalLink — Connecting Shamli Businesses to Customers & Enterprises</title>
-  <meta name="description" content="LocalLink is a trusted digital directory and marketplace platform for businesses in Shamli, Uttar Pradesh. Find local businesses, shop B2B & B2C.">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/sections.css">
-  <link rel="stylesheet" href="css/pages.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔗</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalLink — Connecting Shamli Businesses to Customers & Enterprises</title>
+    <meta name="description"
+        content="LocalLink is a trusted digital directory and marketplace platform for businesses in Shamli, Uttar Pradesh. Find local businesses, shop B2B & B2C.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔗</text></svg>">
 </head>
+
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar" id="navbar">
-    <div class="container">
-      <a href="index.html" class="nav-logo">
-        <div class="nav-logo-icon">L</div>
-        LocalLink
-      </a>
-      <div class="nav-links" id="navLinks">
-        <a href="index.html" class="active">Home</a>
-        <a href="#about">About</a>
-        <a href="#businesses">Businesses</a>
-        <a href="contact.html">Contact</a>
-        <a href="register.html" class="btn btn-primary nav-cta">Register Business</a>
-      </div>
-      <div class="hamburger" id="hamburger">
-        <span></span><span></span><span></span>
-      </div>
-    </div>
-  </nav>
-  <div class="nav-overlay" id="navOverlay"></div>
-
-  <!-- Hero Section -->
-  <section class="hero" id="hero">
-    <div class="hero-shapes">
-      <div class="shape"></div><div class="shape"></div><div class="shape"></div><div class="shape"></div>
-    </div>
-    <div class="hero-content">
-      <div class="hero-badge">🏪 Shamli's #1 Business Directory</div>
-      <h1>Connecting Shamli Businesses to <span>Customers & Enterprises</span></h1>
-      <p class="hero-tagline">Discover trusted local businesses, shop directly, and grow your enterprise with LocalLink — the ultimate B2B & B2C marketplace for Shamli.</p>
-      <div class="hero-buttons">
-        <a href="#businesses" class="btn btn-primary">Explore Businesses</a>
-        <a href="register.html" class="btn btn-secondary">Register Your Business</a>
-      </div>
-      <div class="hero-stats">
-        <div class="hero-stat"><div class="hero-stat-number">10+</div><div class="hero-stat-label">Listed Businesses</div></div>
-        <div class="hero-stat"><div class="hero-stat-number">8+</div><div class="hero-stat-label">Categories</div></div>
-        <div class="hero-stat"><div class="hero-stat-number">500+</div><div class="hero-stat-label">Happy Customers</div></div>
-        <div class="hero-stat"><div class="hero-stat-number">100%</div><div class="hero-stat-label">Verified</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Search Section -->
-  <section class="search-section">
-    <div class="container">
-      <div class="search-bar">
-        <div class="search-input-wrap">
-          <span class="icon">🔍</span>
-          <input type="text" id="searchInput" placeholder="Search businesses, products, or services...">
-        </div>
-        <div class="search-select-wrap">
-          <select id="categoryFilter">
-            <option value="">All Categories</option>
-            <option value="Hardware & Construction">Hardware & Construction</option>
-            <option value="Agriculture Supplies">Agriculture Supplies</option>
-            <option value="Furniture & Interiors">Furniture & Interiors</option>
-            <option value="Electronics & Appliances">Electronics & Appliances</option>
-            <option value="FMCG & Dairy">FMCG & Dairy</option>
-            <option value="Pharmacy">Pharmacy</option>
-            <option value="Logistics & Transport">Logistics & Transport</option>
-            <option value="Plants & Gardening">Plants & Gardening</option>
-            <option value="Education">Education</option>
-            <option value="Clothing & Wholesale">Clothing & Wholesale</option>
-          </select>
-        </div>
-        <button class="btn btn-primary search-btn" id="searchBtn">Search</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="about" id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-content reveal-left">
-          <h2>About LocalLink</h2>
-          <p>LocalLink is a trusted digital directory and marketplace platform for businesses in Shamli, Uttar Pradesh. It enables direct B2B and B2C transactions, increasing visibility and growth opportunities for local enterprises.</p>
-          <p>Our mission is to bridge the gap between local businesses and customers, creating a thriving digital ecosystem that benefits the entire Shamli community.</p>
-          <div class="about-features">
-            <div class="about-feature">
-              <div class="about-feature-icon">🤝</div>
-              <div><h4>B2B & B2C</h4><p>Direct business connections</p></div>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="nav-logo">
+                <div class="nav-logo-icon">L</div>
+                LocalLink
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#businesses">Businesses</a>
+                <a href="contact.html">Contact</a>
+                <a href="register.html" class="btn btn-primary nav-cta">Register Business</a>
             </div>
-            <div class="about-feature">
-              <div class="about-feature-icon">✅</div>
-              <div><h4>Verified</h4><p>All businesses verified</p></div>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
             </div>
-            <div class="about-feature">
-              <div class="about-feature-icon">📱</div>
-              <div><h4>Easy Access</h4><p>Connect from anywhere</p></div>
+        </div>
+    </nav>
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">🏪 Shamli's #1 Business Directory</div>
+            <h1>Connecting Shamli Businesses to <span>Customers & Enterprises</span></h1>
+            <p class="hero-tagline">Discover trusted local businesses, shop directly, and grow your enterprise with
+                LocalLink — the ultimate B2B & B2C marketplace for Shamli.</p>
+            <div class="hero-buttons">
+                <a href="#businesses" class="btn btn-primary">Explore Businesses</a>
+                <a href="register.html" class="btn btn-secondary">Register Your Business</a>
             </div>
-            <div class="about-feature">
-              <div class="about-feature-icon">🚀</div>
-              <div><h4>Growth</h4><p>Boost your visibility</p></div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-number">10+</div>
+                    <div class="hero-stat-label">Listed Businesses</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">8+</div>
+                    <div class="hero-stat-label">Categories</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">500+</div>
+                    <div class="hero-stat-label">Happy Customers</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">100%</div>
+                    <div class="hero-stat-label">Verified</div>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="about-visual reveal-right">
-          <div class="about-card">
-            <div class="about-card-stat"><h3>Shamli</h3><p>Uttar Pradesh, India</p></div>
-            <div class="about-card-stat"><h3>10+</h3><p>Registered Businesses</p></div>
-            <div class="about-card-stat"><h3>100%</h3><p>Free to Join</p></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Featured Businesses -->
-  <section class="businesses" id="businesses">
-    <div class="container">
-      <div class="section-header">
-        <h2>Featured Businesses</h2>
-        <p>Explore top-rated local businesses in Shamli across various categories.</p>
-      </div>
-      <div class="business-grid" id="businessGrid"></div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="testimonials" id="testimonials">
-    <div class="container">
-      <div class="section-header">
-        <h2>What People Say</h2>
-        <p>Hear from our community of businesses and customers in Shamli.</p>
-      </div>
-      <div class="testimonial-grid" id="testimonialGrid"></div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <div class="container">
-      <div class="cta-content reveal">
-        <h2>Ready to Grow Your Business?</h2>
-        <p>Join LocalLink today and connect with hundreds of customers and businesses in Shamli.</p>
-        <a href="register.html" class="btn btn-primary">Register Now — It's Free</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="index.html" class="nav-logo"><div class="nav-logo-icon">L</div>LocalLink</a>
-          <p>Shamli's trusted digital directory and marketplace platform connecting local businesses to customers and enterprises.</p>
-          <div class="footer-social">
-            <a href="#" title="Facebook">📘</a>
-            <a href="#" title="Twitter">🐦</a>
-            <a href="#" title="Instagram">📸</a>
-            <a href="#" title="LinkedIn">💼</a>
-          </div>
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-bar">
+                <div class="search-input-wrap">
+                    <span class="icon">🔍</span>
+                    <input type="text" id="searchInput" placeholder="Search businesses, products, or services...">
+                </div>
+                <div class="search-select-wrap">
+                    <select id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <option value="Hardware & Construction">Hardware & Construction</option>
+                        <option value="Agriculture Supplies">Agriculture Supplies</option>
+                        <option value="Furniture & Interiors">Furniture & Interiors</option>
+                        <option value="Electronics & Appliances">Electronics & Appliances</option>
+                        <option value="FMCG & Dairy">FMCG & Dairy</option>
+                        <option value="Pharmacy">Pharmacy</option>
+                        <option value="Logistics & Transport">Logistics & Transport</option>
+                        <option value="Plants & Gardening">Plants & Gardening</option>
+                        <option value="Education">Education</option>
+                        <option value="Clothing & Wholesale">Clothing & Wholesale</option>
+                        <option value="Food & Restaurant">Food & Restaurant</option>
+                        <option value="IT & Technology">IT & Technology</option>
+                        <option value="Automobile">Automobile</option>
+                        <option value="Health & Fitness">Health & Fitness</option>
+                        <option value="Jewellery">Jewellery</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary search-btn" id="searchBtn">Search</button>
+            </div>
         </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <a href="index.html">Home</a>
-          <a href="#about">About Us</a>
-          <a href="#businesses">Businesses</a>
-          <a href="contact.html">Contact</a>
-        </div>
-        <div class="footer-col">
-          <h4>For Business</h4>
-          <a href="register.html">Register Business</a>
-          <a href="#">Advertise</a>
-          <a href="#">Business Tools</a>
-          <a href="#">Pricing</a>
-        </div>
-        <div class="footer-col">
-          <h4>Legal</h4>
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms & Conditions</a>
-          <a href="#">Cookie Policy</a>
-          <a href="#">Disclaimer</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 LocalLink. All rights reserved. Made with ❤️ in Shamli, Uttar Pradesh.</p>
-      </div>
-    </div>
-  </footer>
+    </section>
 
-  <script src="js/main.js"></script>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content reveal-left">
+                    <h2>About LocalLink</h2>
+                    <p>LocalLink is a trusted digital directory and marketplace platform for businesses in Shamli, Uttar
+                        Pradesh. It enables direct B2B and B2C transactions, increasing visibility and growth
+                        opportunities for local enterprises.</p>
+                    <p>Our mission is to bridge the gap between local businesses and customers, creating a thriving
+                        digital ecosystem that benefits the entire Shamli community.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="about-feature-icon">🤝</div>
+                            <div>
+                                <h4>B2B & B2C</h4>
+                                <p>Direct business connections</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">✅</div>
+                            <div>
+                                <h4>Verified</h4>
+                                <p>All businesses verified</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">📱</div>
+                            <div>
+                                <h4>Easy Access</h4>
+                                <p>Connect from anywhere</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">🚀</div>
+                            <div>
+                                <h4>Growth</h4>
+                                <p>Boost your visibility</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual reveal-right">
+                    <div class="about-card">
+                        <div class="about-card-stat">
+                            <h3>Shamli</h3>
+                            <p>Uttar Pradesh, India</p>
+                        </div>
+                        <div class="about-card-stat">
+                            <h3>10+</h3>
+                            <p>Registered Businesses</p>
+                        </div>
+                        <div class="about-card-stat">
+                            <h3>100%</h3>
+                            <p>Free to Join</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Businesses -->
+    <section class="businesses" id="businesses">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Businesses</h2>
+                <p>Explore top-rated local businesses in Shamli across various categories.</p>
+            </div>
+            <div class="business-grid" id="businessGrid"></div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What People Say</h2>
+                <p>Hear from our community of businesses and customers in Shamli.</p>
+            </div>
+            <div class="testimonial-grid" id="testimonialGrid"></div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content reveal">
+                <h2>Ready to Grow Your Business?</h2>
+                <p>Join LocalLink today and connect with hundreds of customers and businesses in Shamli.</p>
+                <a href="register.html" class="btn btn-primary">Register Now — It's Free</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="nav-logo">
+                        <div class="nav-logo-icon">L</div>LocalLink
+                    </a>
+                    <p>Shamli's trusted digital directory and marketplace platform connecting local businesses to
+                        customers and enterprises.</p>
+                    <div class="footer-social">
+                        <a href="#" title="Facebook">📘</a>
+                        <a href="#" title="Twitter">🐦</a>
+                        <a href="#" title="Instagram">📸</a>
+                        <a href="#" title="LinkedIn">💼</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="index.html">Home</a>
+                    <a href="#about">About Us</a>
+                    <a href="#businesses">Businesses</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-col">
+                    <h4>For Business</h4>
+                    <a href="register.html">Register Business</a>
+                    <a href="#">Advertise</a>
+                    <a href="#">Business Tools</a>
+                    <a href="#">Pricing</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Cookie Policy</a>
+                    <a href="#">Disclaimer</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LocalLink. All rights reserved. Made with ❤️ in Shamli, Uttar Pradesh.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
+
 </html>

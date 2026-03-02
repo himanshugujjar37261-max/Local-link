@@ -1,16 +1,14 @@
-/* ============================================
-   LOCALLINK — Main JavaScript
-   ============================================ */
+/* LOCALLINK — Main JavaScript */
 
-// ─── Business Data ───
-const businesses = [
+// Business Data (15 businesses)
+var businesses = [
   {
     id: 1, name: "Gupta Steel Traders", category: "Hardware & Construction",
     address: "Railway Road, Near Hanuman Mandir, Shamli, Uttar Pradesh 247776",
     phone: "+91 98765 43210", email: "info@guptasteelshamli.com",
     website: "https://www.guptasteelshamli.com",
     description: "Supplier of TMT bars, pipes, cement, and construction materials for bulk and retail purchase.",
-    tags: ["B2B", "B2C"], color: "#1e40af",
+    tags: ["B2B", "B2C"], color: "#1e40af", image: "images/steel_traders.png",
     services: ["TMT Bars & Rods", "Cement & Concrete", "Pipes & Fittings", "Construction Tools", "Bulk Supply", "Retail Sales"],
     initials: "GS"
   },
@@ -20,7 +18,7 @@ const businesses = [
     phone: "+91 98123 45678", email: "sales@shamliagroseeds.in",
     website: "https://www.shamliagroseeds.in",
     description: "High-quality seeds, fertilizers, and agricultural tools.",
-    tags: ["B2B", "B2C"], color: "#166534",
+    tags: ["B2B", "B2C"], color: "#166534", image: "images/agro_seeds.png",
     services: ["Hybrid Seeds", "Organic Fertilizers", "Pesticides", "Agricultural Tools", "Irrigation Equipment", "Soil Testing"],
     initials: "SA"
   },
@@ -30,7 +28,7 @@ const businesses = [
     phone: "+91 98234 11223", email: "royal@furniturehouse.in",
     website: "https://www.royalfurniturehouse.in",
     description: "Modern and custom wooden furniture for homes and offices.",
-    tags: ["B2C"], color: "#92400e",
+    tags: ["B2C"], color: "#92400e", image: "images/furniture_house.png",
     services: ["Living Room Furniture", "Bedroom Sets", "Office Furniture", "Custom Designs", "Interior Consultation", "Modular Kitchens"],
     initials: "RF"
   },
@@ -40,7 +38,7 @@ const businesses = [
     phone: "+91 98976 55443", email: "contact@vermaelectronics.in",
     website: "https://www.vermaelectronics.in",
     description: "Authorized dealer of home appliances and electronics.",
-    tags: ["B2C"], color: "#7c3aed",
+    tags: ["B2C"], color: "#7c3aed", image: "images/electronics_store.png",
     services: ["LED TVs", "Washing Machines", "Refrigerators", "Air Conditioners", "Mobile Phones", "Home Theater Systems"],
     initials: "VE"
   },
@@ -50,7 +48,7 @@ const businesses = [
     phone: "+91 98760 99887", email: "orders@shamlidairy.com",
     website: "https://www.shamlidairy.com",
     description: "Fresh milk, paneer, ghee, and dairy products supplied locally and in bulk.",
-    tags: ["B2B", "B2C"], color: "#0e7490",
+    tags: ["B2B", "B2C"], color: "#0e7490", image: "images/dairy_products.png",
     services: ["Fresh Milk", "Paneer", "Desi Ghee", "Curd & Yogurt", "Bulk Supply", "Home Delivery"],
     initials: "SD"
   },
@@ -61,6 +59,7 @@ const businesses = [
     website: "https://www.modernmedicalshamli.in",
     description: "All types of medicines and healthcare products available.",
     tags: ["B2C"], color: "#dc2626",
+    image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=600&h=400&fit=crop",
     services: ["Prescription Medicines", "OTC Medicines", "Healthcare Products", "Baby Care", "Surgical Items", "Home Delivery"],
     initials: "MM"
   },
@@ -71,6 +70,7 @@ const businesses = [
     website: "https://www.jindaltransport.in",
     description: "Reliable goods transportation services across Uttar Pradesh.",
     tags: ["B2B"], color: "#ea580c",
+    image: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600&h=400&fit=crop",
     services: ["Full Truck Load", "Part Load", "Warehouse Storage", "Express Delivery", "Packaging Services", "GPS Tracking"],
     initials: "JT"
   },
@@ -81,6 +81,7 @@ const businesses = [
     website: "https://www.greenvalleynursery.in",
     description: "Indoor and outdoor plants, landscaping services.",
     tags: ["B2C"], color: "#15803d",
+    image: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=400&fit=crop",
     services: ["Indoor Plants", "Outdoor Plants", "Landscaping", "Garden Tools", "Pots & Planters", "Maintenance Services"],
     initials: "GV"
   },
@@ -89,8 +90,9 @@ const businesses = [
     address: "Near Arya Samaj Mandir, Shamli",
     phone: "+91 98888 77665", email: "admin@brightcoaching.in",
     website: "https://www.brightcoaching.in",
-    description: "Coaching for classes 9–12 and competitive exams.",
+    description: "Coaching for classes 9-12 and competitive exams.",
     tags: ["B2C"], color: "#4338ca",
+    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600&h=400&fit=crop",
     services: ["Class 9-10 Coaching", "Class 11-12 Coaching", "JEE Preparation", "NEET Preparation", "Online Classes", "Study Material"],
     initials: "BC"
   },
@@ -101,262 +103,324 @@ const businesses = [
     website: "https://www.sharmatextiles.in",
     description: "Wholesale and retail garments supplier.",
     tags: ["B2B", "B2C"], color: "#be185d",
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=400&fit=crop",
     services: ["Men's Clothing", "Women's Clothing", "Kids Wear", "Wholesale Orders", "Fabric Rolls", "Custom Stitching"],
     initials: "ST"
+  },
+  {
+    id: 11, name: "Annapurna Sweets & Restaurant", category: "Food & Restaurant",
+    address: "Station Road, Near Old Bus Stand, Shamli, UP 247776",
+    phone: "+91 98222 33445", email: "orders@annapurnashamli.in",
+    website: "https://www.annapurnashamli.in",
+    description: "Authentic North Indian cuisine, sweets, and catering services for events and daily dining.",
+    tags: ["B2C"], color: "#b91c1c",
+    image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&h=400&fit=crop",
+    services: ["North Indian Cuisine", "Sweets & Namkeen", "Event Catering", "Party Orders", "Home Delivery", "Breakfast Specials"],
+    initials: "AS"
+  },
+  {
+    id: 12, name: "TechVision IT Solutions", category: "IT & Technology",
+    address: "Sadar Bazaar, Above Punjab National Bank, Shamli",
+    phone: "+91 98333 44556", email: "hello@techvisionshamli.in",
+    website: "https://www.techvisionshamli.in",
+    description: "Computer sales, repair, CCTV installation, and web development services for local businesses.",
+    tags: ["B2B", "B2C"], color: "#0369a1",
+    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=600&h=400&fit=crop",
+    services: ["Computer Sales", "Laptop Repair", "CCTV Installation", "Web Development", "Networking", "AMC Services"],
+    initials: "TV"
+  },
+  {
+    id: 13, name: "Malik Auto Parts", category: "Automobile",
+    address: "GT Road, Near Petrol Pump, Shamli, UP 247776",
+    phone: "+91 98444 55667", email: "contact@malikautoshamli.in",
+    website: "https://www.malikautoshamli.in",
+    description: "Genuine automobile spare parts, accessories, and servicing for all types of vehicles.",
+    tags: ["B2B", "B2C"], color: "#374151",
+    image: "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=600&h=400&fit=crop",
+    services: ["Spare Parts", "Engine Oil", "Batteries", "Tyre & Tubes", "Car Accessories", "Bike Parts"],
+    initials: "MA"
+  },
+  {
+    id: 14, name: "Sunrise Fitness Gym", category: "Health & Fitness",
+    address: "Kairana Road, Opp. Community Hall, Shamli",
+    phone: "+91 98555 66778", email: "join@sunrisefitness.in",
+    website: "https://www.sunrisefitness.in",
+    description: "Modern gym with cardio, weight training, yoga classes, and personal training sessions.",
+    tags: ["B2C"], color: "#c2410c",
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&h=400&fit=crop",
+    services: ["Weight Training", "Cardio Zone", "Yoga Classes", "Personal Training", "Zumba", "Diet Consultation"],
+    initials: "SF"
+  },
+  {
+    id: 15, name: "Sachdeva Jewellers", category: "Jewellery",
+    address: "Chowk Bazaar, Main Road, Shamli, UP 247776",
+    phone: "+91 98666 77889", email: "info@sachdevajewellers.in",
+    website: "https://www.sachdevajewellers.in",
+    description: "Exquisite gold, silver, and diamond jewellery with certified hallmarking and custom designs.",
+    tags: ["B2C"], color: "#a16207",
+    image: "https://images.unsplash.com/photo-1515562141589-67f0d727b750?w=600&h=400&fit=crop",
+    services: ["Gold Jewellery", "Silver Jewellery", "Diamond Rings", "Custom Designs", "Hallmark Certified", "Exchange & Buyback"],
+    initials: "SJ"
   }
 ];
 
-const testimonials = [
+var testimonials = [
   { name: "Rajesh Kumar", role: "Owner, Kumar General Store", text: "LocalLink helped us reach more customers in Shamli. Our orders increased by 40% within two months!", color: "#2563eb", initials: "RK", stars: 5 },
   { name: "Priya Sharma", role: "Resident, Shamli", text: "Finding trusted local businesses has never been easier. The platform is very user-friendly and convenient.", color: "#7c3aed", initials: "PS", stars: 5 },
   { name: "Amit Gupta", role: "Manager, Gupta Steel Traders", text: "Our B2B connections grew significantly after listing on LocalLink. Great platform for local businesses!", color: "#0e7490", initials: "AG", stars: 4 }
 ];
 
-// ─── DOM Ready ───
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", function () {
   initNavbar();
   initScrollReveal();
   initMobileMenu();
-  if (document.getElementById('businessGrid')) renderBusinessCards(businesses);
-  if (document.getElementById('testimonialGrid')) renderTestimonials();
-  if (document.getElementById('registerForm')) initRegisterForm();
-  if (document.getElementById('contactForm')) initContactForm();
-  if (document.getElementById('detailPage')) initDetailPage();
-  if (document.getElementById('searchInput')) initSearch();
+  if (document.getElementById("businessGrid")) { renderBusinessCards(businesses); }
+  if (document.getElementById("testimonialGrid")) { renderTestimonials(); }
+  if (document.getElementById("registerForm")) { initRegisterForm(); }
+  if (document.getElementById("contactForm")) { initContactForm(); }
+  if (document.getElementById("detailPage")) { initDetailPage(); }
+  if (document.getElementById("searchInput")) { initSearch(); }
 });
 
-// ─── Navbar ───
 function initNavbar() {
-  const nav = document.querySelector('.navbar');
+  var nav = document.querySelector(".navbar");
   if (!nav) return;
-  const isSubPage = nav.classList.contains('no-hero');
-  window.addEventListener('scroll', () => {
-    if (!isSubPage) {
-      nav.classList.toggle('scrolled', window.scrollY > 50);
-    }
+  var isSubPage = nav.classList.contains("no-hero");
+  window.addEventListener("scroll", function () {
+    if (!isSubPage) { nav.classList.toggle("scrolled", window.scrollY > 50); }
   });
-  if (!isSubPage && window.scrollY > 50) nav.classList.add('scrolled');
+  if (!isSubPage && window.scrollY > 50) nav.classList.add("scrolled");
 }
 
-// ─── Mobile Menu ───
 function initMobileMenu() {
-  const hamburger = document.querySelector('.hamburger');
-  const navLinks = document.querySelector('.nav-links');
-  const overlay = document.querySelector('.nav-overlay');
+  var hamburger = document.querySelector(".hamburger");
+  var navLinks = document.querySelector(".nav-links");
+  var overlay = document.querySelector(".nav-overlay");
   if (!hamburger) return;
-  const toggle = () => {
-    hamburger.classList.toggle('active');
-    navLinks.classList.toggle('active');
-    if (overlay) overlay.classList.toggle('active');
-    document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
-  };
-  hamburger.addEventListener('click', toggle);
-  if (overlay) overlay.addEventListener('click', toggle);
-  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    if (navLinks.classList.contains('active')) toggle();
-  }));
+  function toggle() {
+    hamburger.classList.toggle("active");
+    navLinks.classList.toggle("active");
+    if (overlay) overlay.classList.toggle("active");
+    document.body.style.overflow = navLinks.classList.contains("active") ? "hidden" : "";
+  }
+  hamburger.addEventListener("click", toggle);
+  if (overlay) overlay.addEventListener("click", toggle);
+  var links = navLinks.querySelectorAll("a");
+  for (var i = 0; i < links.length; i++) {
+    links[i].addEventListener("click", function () { if (navLinks.classList.contains("active")) toggle(); });
+  }
 }
 
-// ─── Scroll Reveal ───
 function initScrollReveal() {
-  const els = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  var els = document.querySelectorAll(".reveal, .reveal-left, .reveal-right");
   if (!els.length) return;
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('active'); observer.unobserve(e.target); } });
-  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-  els.forEach(el => observer.observe(el));
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("active"); observer.unobserve(e.target); } });
+  }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
+  els.forEach(function (el) { observer.observe(el); });
 }
 
-// ─── Render Business Cards ───
+function buildCard(b, i) {
+  var tagsHtml = "";
+  for (var t = 0; t < b.tags.length; t++) {
+    tagsHtml += '<span class="tag tag-' + b.tags[t].toLowerCase() + '">' + b.tags[t] + "</span>";
+  }
+  var phone = b.phone.replace(/\s/g, "");
+  return '<div class="business-card reveal" style="transition-delay:' + (i * 0.05) + 's">' +
+    '<div class="business-card-image" style="background:linear-gradient(135deg,' + b.color + ',' + b.color + 'dd);position:relative">' +
+    '<div class="logo-placeholder">' + b.initials + '</div>' +
+    '<img src="' + b.image + '" alt="' + b.name + '" style="width:100%;height:180px;object-fit:cover;position:absolute;top:0;left:0;z-index:1" onerror="this.style.display=\'none\'">' +
+    '<div class="business-card-tags" style="z-index:2;position:relative">' + tagsHtml + '</div>' +
+    '</div>' +
+    '<div class="business-card-body">' +
+    '<div class="business-card-category">' + b.category + '</div>' +
+    '<h3>' + b.name + '</h3>' +
+    '<p class="description">' + b.description + '</p>' +
+    '<div class="business-card-info">' +
+    '<div class="info-item"><span class="icon">📍</span>' + b.address + '</div>' +
+    '<div class="info-item"><span class="icon">📞</span>' + b.phone + '</div>' +
+    '</div>' +
+    '<div class="business-card-footer">' +
+    '<a href="business.html?id=' + b.id + '" class="btn btn-primary btn-sm">View Details</a>' +
+    '<a href="tel:' + phone + '" class="btn btn-outline btn-sm">Call Now</a>' +
+    '</div>' +
+    '</div>' +
+    '</div>';
+}
+
 function renderBusinessCards(data) {
-  const grid = document.getElementById('businessGrid');
+  var grid = document.getElementById("businessGrid");
   if (!grid) return;
   if (!data.length) {
-    grid.innerHTML = `<div class="no-results"><div class="icon">🔍</div><h3>No businesses found</h3><p>Try adjusting your search or category filter.</p></div>`;
+    grid.innerHTML = '<div class="no-results"><div class="icon">🔍</div><h3>No businesses found</h3><p>Try adjusting your search or category filter.</p></div>';
     return;
   }
-  grid.innerHTML = data.map((b, i) => `
-    <div class="business-card reveal" style="transition-delay:${i * 0.05}s">
-      <div class="business-card-image" style="background:linear-gradient(135deg,${b.color},${b.color}dd)">
-        <div class="logo-placeholder">${b.initials}</div>
-        <div class="business-card-tags">
-          ${b.tags.map(t => `<span class="tag tag-${t.toLowerCase()}">${t}</span>`).join('')}
-        </div>
-      </div>
-      <div class="business-card-body">
-        <div class="business-card-category">${b.category}</div>
-        <h3>${b.name}</h3>
-        <p class="description">${b.description}</p>
-        <div class="business-card-info">
-          <div class="info-item"><span class="icon">📍</span>${b.address}</div>
-          <div class="info-item"><span class="icon">📞</span>${b.phone}</div>
-        </div>
-        <div class="business-card-footer">
-          <a href="business.html?id=${b.id}" class="btn btn-primary btn-sm">View Details</a>
-          <a href="tel:${b.phone.replace(/\s/g,'')}" class="btn btn-outline btn-sm">Call Now</a>
-        </div>
-      </div>
-    </div>
-  `).join('');
+  var html = "";
+  for (var i = 0; i < data.length; i++) { html += buildCard(data[i], i); }
+  grid.innerHTML = html;
   initScrollReveal();
 }
 
-// ─── Search & Filter ───
 function initSearch() {
-  const input = document.getElementById('searchInput');
-  const select = document.getElementById('categoryFilter');
-  const searchBtn = document.getElementById('searchBtn');
-  const filter = () => {
-    const q = input.value.toLowerCase().trim();
-    const cat = select.value;
-    const filtered = businesses.filter(b => {
-      const matchQ = !q || b.name.toLowerCase().includes(q) || b.description.toLowerCase().includes(q) || b.category.toLowerCase().includes(q);
-      const matchCat = !cat || b.category === cat;
+  var input = document.getElementById("searchInput");
+  var select = document.getElementById("categoryFilter");
+  var searchBtn = document.getElementById("searchBtn");
+  function doFilter() {
+    var q = input.value.toLowerCase().trim();
+    var cat = select.value;
+    var filtered = businesses.filter(function (b) {
+      var matchQ = !q || b.name.toLowerCase().indexOf(q) >= 0 || b.description.toLowerCase().indexOf(q) >= 0 || b.category.toLowerCase().indexOf(q) >= 0;
+      var matchCat = !cat || b.category === cat;
       return matchQ && matchCat;
     });
     renderBusinessCards(filtered);
-  };
-  input.addEventListener('input', filter);
-  select.addEventListener('change', filter);
-  if (searchBtn) searchBtn.addEventListener('click', filter);
+  }
+  input.addEventListener("input", doFilter);
+  select.addEventListener("change", doFilter);
+  if (searchBtn) searchBtn.addEventListener("click", doFilter);
 }
 
-// ─── Render Testimonials ───
 function renderTestimonials() {
-  const grid = document.getElementById('testimonialGrid');
+  var grid = document.getElementById("testimonialGrid");
   if (!grid) return;
-  grid.innerHTML = testimonials.map((t, i) => `
-    <div class="testimonial-card reveal" style="transition-delay:${i * 0.1}s">
-      <div class="testimonial-quote">"</div>
-      <div class="testimonial-stars">${'★'.repeat(t.stars)}${'☆'.repeat(5 - t.stars)}</div>
-      <p>${t.text}</p>
-      <div class="testimonial-author">
-        <div class="testimonial-avatar" style="background:${t.color}">${t.initials}</div>
-        <div class="testimonial-info"><h4>${t.name}</h4><span>${t.role}</span></div>
-      </div>
-    </div>
-  `).join('');
+  var html = "";
+  for (var i = 0; i < testimonials.length; i++) {
+    var t = testimonials[i];
+    var stars = "";
+    for (var s = 0; s < 5; s++) { stars += s < t.stars ? "★" : "☆"; }
+    html += '<div class="testimonial-card reveal" style="transition-delay:' + (i * 0.1) + 's">' +
+      '<div class="testimonial-quote">"</div>' +
+      '<div class="testimonial-stars">' + stars + '</div>' +
+      '<p>' + t.text + '</p>' +
+      '<div class="testimonial-author">' +
+      '<div class="testimonial-avatar" style="background:' + t.color + '">' + t.initials + '</div>' +
+      '<div class="testimonial-info"><h4>' + t.name + '</h4><span>' + t.role + '</span></div>' +
+      '</div></div>';
+  }
+  grid.innerHTML = html;
   initScrollReveal();
 }
 
-// ─── Business Detail Page ───
 function initDetailPage() {
-  const params = new URLSearchParams(window.location.search);
-  const id = parseInt(params.get('id'));
-  const biz = businesses.find(b => b.id === id);
-  if (!biz) { document.getElementById('detailPage').innerHTML = '<div class="container" style="padding:100px 0;text-align:center"><h2>Business not found</h2><p>Please go back and try again.</p><a href="index.html" class="btn btn-primary" style="margin-top:20px">Back to Home</a></div>'; return; }
+  var params = new URLSearchParams(window.location.search);
+  var id = parseInt(params.get("id"));
+  var biz = null;
+  for (var i = 0; i < businesses.length; i++) { if (businesses[i].id === id) { biz = businesses[i]; break; } }
+  if (!biz) {
+    document.getElementById("detailPage").innerHTML = '<div class="container" style="padding:100px 0;text-align:center"><h2>Business not found</h2><p>Go back and try again.</p><a href="index.html" class="btn btn-primary" style="margin-top:20px">Back to Home</a></div>';
+    return;
+  }
 
-  // Page header
-  document.getElementById('detailName').textContent = biz.name;
-  document.getElementById('detailBreadcrumbName').textContent = biz.name;
+  document.title = biz.name + " — LocalLink";
+  document.getElementById("detailName").textContent = biz.name;
+  document.getElementById("detailBreadcrumbName").textContent = biz.name;
 
-  // Gallery
-  const mainImg = document.getElementById('mainImage');
-  mainImg.style.background = `linear-gradient(135deg,${biz.color},${biz.color}dd)`;
-  mainImg.innerHTML = `<span style="font-size:5rem;font-weight:900;color:rgba(255,255,255,0.9)">${biz.initials}</span>`;
-  document.getElementById('galleryThumbs').innerHTML = [1,2,3,4].map((n,i) => `<div class="thumb ${i===0?'active':''}" style="background:linear-gradient(135deg,${biz.color}${i===0?'':'99'},${biz.color}${i===0?'dd':'66'})">${biz.initials}</div>`).join('');
+  var mainImg = document.getElementById("mainImage");
+  mainImg.style.background = "linear-gradient(135deg," + biz.color + "," + biz.color + "dd)";
+  mainImg.innerHTML = '<img src="' + biz.image + '" alt="' + biz.name + '" style="width:100%;height:100%;object-fit:cover" onerror="this.style.display=\'none\'"><span style="font-size:5rem;font-weight:900;color:rgba(255,255,255,0.9);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)">' + biz.initials + '</span>';
 
-  // Overview
-  document.getElementById('detailCategory').textContent = biz.category;
-  document.getElementById('detailTitle').textContent = biz.name;
-  document.getElementById('detailTags').innerHTML = biz.tags.map(t => `<span class="tag tag-${t.toLowerCase()}">${t}</span>`).join(' ');
-  document.getElementById('detailDesc').textContent = biz.description;
+  var thumbs = "";
+  for (var t = 0; t < 4; t++) {
+    thumbs += '<div class="thumb ' + (t === 0 ? "active" : "") + '" style="background:linear-gradient(135deg,' + biz.color + (t === 0 ? "" : "99") + ',' + biz.color + (t === 0 ? "dd" : "66") + ')">' + biz.initials + '</div>';
+  }
+  document.getElementById("galleryThumbs").innerHTML = thumbs;
 
-  // Services
-  document.getElementById('detailServices').innerHTML = biz.services.map(s => `<li><span class="icon">✓</span>${s}</li>`).join('');
+  document.getElementById("detailCategory").textContent = biz.category;
+  document.getElementById("detailTitle").textContent = biz.name;
 
-  // Contact info
-  document.getElementById('detailAddress').textContent = biz.address;
-  document.getElementById('detailPhone').textContent = biz.phone;
-  document.getElementById('detailEmail').textContent = biz.email;
-  document.getElementById('detailWebsite').textContent = biz.website;
-  document.getElementById('detailWebsite').href = biz.website;
+  var tagsHtml = "";
+  for (var j = 0; j < biz.tags.length; j++) { tagsHtml += '<span class="tag tag-' + biz.tags[j].toLowerCase() + '">' + biz.tags[j] + '</span> '; }
+  document.getElementById("detailTags").innerHTML = tagsHtml;
+  document.getElementById("detailDesc").textContent = biz.description;
 
-  // WhatsApp
-  const waBtn = document.getElementById('whatsappBtn');
-  waBtn.href = `https://wa.me/${biz.phone.replace(/[^0-9]/g,'')}`;
+  var servicesHtml = "";
+  for (var k = 0; k < biz.services.length; k++) { servicesHtml += '<li><span class="icon">✓</span>' + biz.services[k] + '</li>'; }
+  document.getElementById("detailServices").innerHTML = servicesHtml;
 
-  // Reviews
-  const reviews = [
-    { name: "Suresh M.", stars: 5, text: `Excellent service from ${biz.name}. Very professional and reliable. Highly recommend!`, color: "#2563eb", initials: "SM" },
+  document.getElementById("detailAddress").textContent = biz.address;
+  document.getElementById("detailPhone").textContent = biz.phone;
+  document.getElementById("detailEmail").textContent = biz.email;
+  document.getElementById("detailWebsite").textContent = biz.website;
+  document.getElementById("detailWebsite").href = biz.website;
+  document.getElementById("whatsappBtn").href = "https://wa.me/" + biz.phone.replace(/[^0-9]/g, "");
+
+  var reviews = [
+    { name: "Suresh M.", stars: 5, text: "Excellent service from " + biz.name + ". Very professional and reliable. Highly recommend!", color: "#2563eb", initials: "SM" },
     { name: "Neha P.", stars: 4, text: "Good quality products and fair pricing. The staff is friendly and helpful.", color: "#7c3aed", initials: "NP" },
     { name: "Vikram S.", stars: 5, text: "Been a regular customer for over 2 years. Consistent quality and great customer support.", color: "#0e7490", initials: "VS" }
   ];
-  document.getElementById('reviewsList').innerHTML = reviews.map(r => `
-    <div class="review-card">
-      <div class="review-header">
-        <div class="review-avatar" style="background:${r.color}">${r.initials}</div>
-        <div class="review-meta"><h4>${r.name}</h4><div class="stars">${'★'.repeat(r.stars)}${'☆'.repeat(5-r.stars)}</div></div>
-      </div>
-      <p class="review-text">${r.text}</p>
-    </div>
-  `).join('');
+  var reviewsHtml = "";
+  for (var r = 0; r < reviews.length; r++) {
+    var rv = reviews[r];
+    var rstars = "";
+    for (var rs = 0; rs < 5; rs++) { rstars += rs < rv.stars ? "★" : "☆"; }
+    reviewsHtml += '<div class="review-card"><div class="review-header"><div class="review-avatar" style="background:' + rv.color + '">' + rv.initials + '</div><div class="review-meta"><h4>' + rv.name + '</h4><div class="stars">' + rstars + '</div></div></div><p class="review-text">' + rv.text + '</p></div>';
+  }
+  document.getElementById("reviewsList").innerHTML = reviewsHtml;
 
-  // Detail contact form
-  const form = document.getElementById('detailContactForm');
+  var form = document.getElementById("detailContactForm");
   if (form) {
-    form.addEventListener('submit', e => {
+    form.addEventListener("submit", function (e) {
       e.preventDefault();
-      alert('Your inquiry has been sent to ' + biz.name + '! They will contact you shortly.');
+      alert("Your inquiry has been sent to " + biz.name + "! They will contact you shortly.");
       form.reset();
     });
   }
 }
 
-// ─── Register Form ───
 function initRegisterForm() {
-  const form = document.getElementById('registerForm');
-  const formContent = document.getElementById('formContent');
-  const successMsg = document.getElementById('successMessage');
-  form.addEventListener('submit', (e) => {
+  var form = document.getElementById("registerForm");
+  var formContent = document.getElementById("formContent");
+  var successMsg = document.getElementById("successMessage");
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
     if (!validateForm(form)) return;
-    formContent.style.display = 'none';
-    successMsg.classList.add('show');
-    window.scrollTo({ top: successMsg.offsetTop - 100, behavior: 'smooth' });
+    formContent.style.display = "none";
+    successMsg.classList.add("show");
+    window.scrollTo({ top: successMsg.offsetTop - 100, behavior: "smooth" });
   });
 }
 
-// ─── Contact Form ───
 function initContactForm() {
-  const form = document.getElementById('contactForm');
-  form.addEventListener('submit', (e) => {
+  var form = document.getElementById("contactForm");
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
     if (!validateForm(form)) return;
-    alert('Thank you for reaching out! We will get back to you within 24 hours.');
+    alert("Thank you for reaching out! We will get back to you within 24 hours.");
     form.reset();
   });
 }
 
-// ─── Validation ───
 function validateForm(form) {
-  let valid = true;
-  form.querySelectorAll('[required]').forEach(field => {
-    if (!field.value.trim()) {
-      field.style.borderColor = '#ef4444';
+  var valid = true;
+  var fields = form.querySelectorAll("[required]");
+  for (var i = 0; i < fields.length; i++) {
+    if (!fields[i].value.trim()) {
+      fields[i].style.borderColor = "#ef4444";
       valid = false;
-      field.addEventListener('input', () => { field.style.borderColor = ''; }, { once: true });
+      (function (f) { f.addEventListener("input", function () { f.style.borderColor = ""; }, { once: true }); })(fields[i]);
     }
-  });
-  const emailField = form.querySelector('input[type="email"]');
+  }
+  var emailField = form.querySelector('input[type="email"]');
   if (emailField && emailField.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value)) {
-    emailField.style.borderColor = '#ef4444';
+    emailField.style.borderColor = "#ef4444";
     valid = false;
   }
   if (!valid) {
-    const firstInvalid = form.querySelector('[style*="border-color"]');
+    var firstInvalid = form.querySelector('[style*="border-color"]');
     if (firstInvalid) firstInvalid.focus();
   }
   return valid;
 }
 
-// ─── Smooth Scroll for anchor links ───
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    const target = document.querySelector(this.getAttribute('href'));
+// Smooth scroll for anchor links
+var anchors = document.querySelectorAll('a[href^="#"]');
+for (var a = 0; a < anchors.length; a++) {
+  anchors[a].addEventListener("click", function (e) {
+    var target = document.querySelector(this.getAttribute("href"));
     if (target) {
       e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   });
-});
+}
